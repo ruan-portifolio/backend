@@ -39,7 +39,7 @@ export class AuthGuard implements CanActivate {
       context.getHandler(),
     );
 
-    const link = 'http://localhost:3001';
+    const link = 'https://backend-m2jp.onrender.com/';
     // Verifica se o cookie de sessão existe
     // Se não existir ou bugar redireciona o user para a pagina que refaz o cookie
     try {

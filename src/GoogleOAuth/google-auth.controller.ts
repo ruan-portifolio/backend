@@ -97,7 +97,7 @@ export class AppController {
       throw new Error('Usuário não encontrado no banco');
     }
     console.log('planoAtivo:', planoAtivo.status);
-    const frontend: string = 'http://localhost:3001';
+    const frontend: string = 'https://backend-m2jp.onrender.com';
     const status = planoAtivo.status;
     if (status === true) {
       return res.redirect(`${frontend}/dashboard`);
