@@ -88,6 +88,7 @@ export class AppService {
     const ENCRYPTION_KEY = Buffer.from(process.env.REDIS_SECRET_KEY!, 'hex'); // 32 bytes
     const IV_LENGTH = 16;
     const iv = crypto.randomBytes(IV_LENGTH);
+    console.log('Length:', ENCRYPTION_KEY.length);
     const cipher = crypto.createCipheriv('aes-256-gcm', ENCRYPTION_KEY, iv);
     const encrypted = Buffer.concat([
       cipher.update(data, 'utf8'),
